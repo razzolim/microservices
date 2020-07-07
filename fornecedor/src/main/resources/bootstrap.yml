@@ -1,8 +1,8 @@
-spring:      
+spring:
   application:
     name: 'fornecedor'
   profiles:
-    active: 'default' # profile que será acessado (configurado no application.yml do config-server)
+    active: default
   cloud:
     config:
-      uri: http://localhost:8888 # ip e porta do config-server
+      uri: http://localhost:8888
