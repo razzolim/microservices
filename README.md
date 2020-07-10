@@ -20,8 +20,8 @@ Some of available routes requests authentication first.
   
 2. __GET (no auth): localhost:5555/fornecedor/produto/{UF}__
 
-3. __POST (auth): localhost:5555/loja/compra
+3. __POST (auth): localhost:5555/loja/compra__
   Body JSON as follows: {"itens": [{"id": 1,"quantidade": 5},{"id": 2,"quantidade": 1}],"endereco": {"rua": "Rua da Maria","numero": "123","estado": "DF
   
-4. __GET (no auth): localhost:5555/loja/compra/{id}
+4. __GET (no auth): localhost:5555/loja/compra/{id}__
   ** Authorization is on its way to be implemented.
