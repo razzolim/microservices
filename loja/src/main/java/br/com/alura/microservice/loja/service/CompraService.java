@@ -57,12 +57,12 @@ public class CompraService {
 		compraSalva.setEnderecoDestino(compra.getEndereco().toString());
 		compraRepository.save(compraSalva);
 		compra.setCompraId(compraSalva.getId());
-
-		LOGGER.info("realizando um pedido");
-		InfoPedidoDTO pedido = fornecedorClient.realizaPedido(compra.getItens());
 		
 		LOGGER.info("buscando informações do fornecedor");
 		InfoFornecedorDTO info = fornecedorClient.getInfoPorEstado(compra.getEndereco().getEstado());
+
+		LOGGER.info("realizando um pedido");
+		InfoPedidoDTO pedido = fornecedorClient.realizaPedido(compra.getItens());
 		
 		compraSalva.setState(CompraState.REALIZADO);
 		compraSalva.setPedidoId(pedido.getId());
