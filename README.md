@@ -9,7 +9,7 @@
 First of all, you might want to take a look at __localhost:5555/actuator/routes__ there you will find all routes available.
 Others endpoints:
 
-Some of available routes requests authentication first.
+For some of available routes you may be require to be authenticated.
 
 1. __POST (no auth): localhost:5555/auth/oauth/token__ this one requires Basic Auth. Username: loja / Password: lojapwd.
   On its body use form-data as follows: 
